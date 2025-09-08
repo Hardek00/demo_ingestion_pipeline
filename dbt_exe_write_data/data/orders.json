@@ -1,0 +1,48 @@
+[
+  {
+    "order_id": "o-1001",
+    "customer_id": 1,
+    "order_date": "2025-08-24T10:13:00Z",
+    "items": [
+      {
+        "product_id": "p-1",
+        "quantity": 2,
+        "unit_price": 199.0
+      },
+      {
+        "product_id": "p-3",
+        "quantity": 1,
+        "unit_price": 49.9
+      }
+    ]
+  },
+  {
+    "order_id": "o-1002",
+    "customer_id": 2,
+    "order_date": "2025-08-24T12:02:00Z",
+    "items": [
+      {
+        "product_id": "p-2",
+        "quantity": 1,
+        "unit_price": 299.0
+      }
+    ]
+  },
+  {
+    "order_id": "o-1003",
+    "customer_id": 1,
+    "order_date": "2025-08-25T09:45:00Z",
+    "items": [
+      {
+        "product_id": "p-1",
+        "quantity": 1,
+        "unit_price": 199.0
+      },
+      {
+        "product_id": "p-4",
+        "quantity": 3,
+        "unit_price": 19.9
+      }
+    ]
+  }
+]

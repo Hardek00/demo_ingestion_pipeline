@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: raw
+    database: zeta-axiom-468312-f1     # your project
+    schema: raw_data                    # your dataset
+    tables:
+      - name: weather_raw 
+      - name: excersise_1_customers
+      - name: excersise_2_customers
+      - name: excersise_1_sessions
+      - name: excersise_1_orders
+      - name: excersise_1_playlists
+
+

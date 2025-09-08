@@ -1,0 +1,43 @@
+[
+  {
+    "user_id": 1,
+    "sessions": [
+      {
+        "session_id": "s-001",
+        "events": [
+          {
+            "event_type": "view",
+            "ts": "2025-08-20T09:00:00Z"
+          },
+          {
+            "event_type": "click",
+            "ts": "2025-08-20T09:01:12Z"
+          }
+        ]
+      },
+      {
+        "session_id": "s-002",
+        "events": [
+          {
+            "event_type": "purchase",
+            "ts": "2025-08-22T16:20:00Z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user_id": 2,
+    "sessions": [
+      {
+        "session_id": "s-003",
+        "events": [
+          {
+            "event_type": "view",
+            "ts": "2025-08-22T11:40:00Z"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "playlist_id": "pl-1",
+    "owner_id": 1,
+    "title": "Morning Focus",
+    "tracks": [
+      {
+        "track_id": "t-01",
+        "title": "Dawn Chorus",
+        "duration_sec": 210
+      },
+      {
+        "track_id": "t-02",
+        "title": "First Light",
+        "duration_sec": 195
+      }
+    ]
+  },
+  {
+    "playlist_id": "pl-2",
+    "owner_id": 3,
+    "title": "Weekend Mix",
+    "tracks": [
+      {
+        "track_id": "t-03",
+        "title": "Saturday Sun",
+        "duration_sec": 245
+      },
+      {
+        "track_id": "t-04",
+        "title": "Lazy River",
+        "duration_sec": 232
+      },
+      {
+        "track_id": "t-05",
+        "title": "Coffee Break",
+        "duration_sec": 180
+      }
+    ]
+  }
+]

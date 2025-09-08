@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Ava Nilsson",
+    "email": "ava.nilsson@example.com",
+    "signup_date": "2025-08-20"
+  },
+  {
+    "id": 2,
+    "name": "Noah Andersson",
+    "email": "noah.andersson@example.com",
+    "signup_date": "2025-08-22"
+  },
+  {
+    "id": 3,
+    "name": "Elsa Johansson",
+    "email": "elsa.j@example.com",
+    "signup_date": "2025-08-23"
+  },
+  {
+    "id": 4,
+    "name": "Liam Karlsson",
+    "email": "liam.karlsson@example.com",
+    "signup_date": "2025-08-24"
+  }
+]
