@@ -30,7 +30,7 @@ steps:
 substitutions:
   _REGION: europe-north2
   _AR_HOST: europe-north2-docker.pkg.dev
-  _AR_REPO: ingestion-pipepline
+  _AR_REPO: zeta-axiom-468312-f1/ingestion-pipepline
   _IMAGE: dbt-weather
   _JOB: dbt-weather
 
