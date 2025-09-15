@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ target.project }}"
+    schema: raw
+    tables:
+      - name: customers
+      - name: orders
+      - name: playlists
+      - name: sessions_json
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: email
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ava.nilsson@example.com','noah.andersson@example.com','elsa.j@example.com','liam.karlsson@example.com']
+  - name: stg_orders_items
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]
+  - name: stg_sessions_events
+    columns:
+      - name: user_id
+        tests: [not_null]
+      - name: event_type
+        tests: [not_null]
+  - name: stg_playlists_tracks
+    columns:
+      - name: playlist_id
+        tests: [not_null]
+      - name: track_id
+        tests: [not_null]

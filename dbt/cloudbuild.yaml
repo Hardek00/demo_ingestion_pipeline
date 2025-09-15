@@ -1,0 +1,38 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ['build','-t','${_AR_HOST}/${_AR_REPO}/${_IMAGE}:$SHORT_SHA','dbt']
+
+  - name: gcr.io/cloud-builders/docker
+    args: ['push','${_AR_HOST}/${_AR_REPO}/${_IMAGE}:$SHORT_SHA']
+
+  # create if missing
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: bash
+    args:
+      - -lc
+      - |
+        gcloud run jobs describe ${_JOB} --region ${_REGION} >/dev/null 2>&1 || \
+        gcloud run jobs create ${_JOB} \
+          --image=${_AR_HOST}/${_AR_REPO}/${_IMAGE}:$SHORT_SHA \
+          --region=${_REGION} \
+          --cpu=1 --memory=1Gi --task-timeout=900
+
+  # update image each push
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    args:
+      - run
+      - jobs
+      - update
+      - ${_JOB}
+      - --image=${_AR_HOST}/${_AR_REPO}/${_IMAGE}:$SHORT_SHA
+      - --region=${_REGION}
+
+substitutions:
+  _REGION: europe-north2
+  _AR_HOST: europe-north2-docker.pkg.dev
+  _AR_REPO: ingestion-pipepline
+  _IMAGE: dbt-weather
+  _JOB: dbt-weather
+
+options:
+  logging: CLOUD_LOGGING_ONLY
