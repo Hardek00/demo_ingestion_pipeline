@@ -1,0 +1,10 @@
+my_first_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: zeta-axiom-468312-f1
+      dataset: raw_data
+      location: europe-north2
+      threads: 4
