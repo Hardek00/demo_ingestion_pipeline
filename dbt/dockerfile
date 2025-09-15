@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 WORKDIR /app
-RUN pip install --no-cache-dir dbt-bigquery==1.8.4
+RUN pip install --no-cache-dir dbt-bigquery==1.8.3
 # copy dbt project
 COPY . .
 # dbt will look here
